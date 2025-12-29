@@ -3,6 +3,10 @@ import Header from '@/components/Header'
 import SponsorsMarquee from '@/components/SponsorsMarquee'
 import CountdownTimer from '@/components/CountdownTimer'
 import { Button } from '@/components/retroui/Button'
+import EventsSection from '@/components/EventsSection'
+import CarouselStyleSizes from '@/components/CarouselStyleSizes'
+import PastTournaments from '@/components/PastTournaments'
+import GalleryBento from '@/components/GalleryBento'
 import bgVideo from '@/assets/7914778-hd_1920_1080_30fps.mp4'
 
 const Home: React.FC = () => {
@@ -41,6 +45,20 @@ const Home: React.FC = () => {
       <div className="flex justify-center px-6 mb-16">
         <CountdownTimer />
       </div>
+
+      {/* Past tournaments (three tiles) */}
+      <PastTournaments />
+
+      {/* Gallery (bento grid) */}
+      <GalleryBento />
+
+      {/* Events section */}
+      <EventsSection />
+
+      {/* Sizes carousel section */}
+      <CarouselStyleSizes />
+
+      
     </div>
   )
 }

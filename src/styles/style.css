@@ -259,3 +259,17 @@ body { font-family: var(--font-primary); }
   transform: translateY(2px) translateX(1px);
   box-shadow: 4px 4px 0 rgba(0,0,0,1);
 }
+
+/* 8-bit card hover animation */
+.card-8bit {
+  transition: transform 140ms linear, box-shadow 140ms linear;
+  box-shadow: 6px 6px 0 rgba(0,0,0,1);
+}
+.card-8bit:hover {
+  transform: translateY(-6px);
+  box-shadow: 10px 10px 0 rgba(0,0,0,1);
+}
+.card-8bit:active {
+  transform: translateY(2px) translateX(1px);
+  box-shadow: 4px 4px 0 rgba(0,0,0,1);
+}
