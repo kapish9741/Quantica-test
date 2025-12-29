@@ -8,6 +8,7 @@ import CarouselStyleSizes from '@/components/CarouselStyleSizes'
 import PastTournaments from '@/components/PastTournaments'
 import GalleryBento from '@/components/GalleryBento'
 import TestimonialsMarquee from '@/components/TestimonialsMarquee'
+import Footer from '@/components/Footer'
 import bgVideo from '@/assets/7914778-hd_1920_1080_30fps.mp4'
 
 const Home: React.FC = () => {
@@ -60,9 +61,12 @@ const Home: React.FC = () => {
       {/* Sizes carousel section */}
       <CarouselStyleSizes />
 
+
       {/* Feedback / testimonials marquee */}
       <TestimonialsMarquee />
       
+      {/* Footer */}
+      <Footer />
     </div>
   )
 }
