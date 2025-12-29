@@ -59,17 +59,28 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ onFinish }) => {
 
     // when finished, either wait for keypress on desktop or auto-finish on mobile
     if (isDesktop) {
-      const onAnyKey = () => {
+      const onKey = (e: KeyboardEvent) => {
+        // prevent spacebar from scrolling the page
+        if (e.code === 'Space' || e.key === ' ' || e.key === 'Spacebar') {
+          e.preventDefault()
+        }
         onFinish?.()
-        window.removeEventListener('keydown', onAnyKey)
-        window.removeEventListener('click', onAnyKey)
+        window.removeEventListener('keydown', onKey)
+        window.removeEventListener('click', onClick)
       }
+
+      const onClick = () => {
+        onFinish?.()
+        window.removeEventListener('keydown', onKey)
+        window.removeEventListener('click', onClick)
+      }
+
       // show prompt (handled in render) and listen for key or click
-      window.addEventListener('keydown', onAnyKey)
-      window.addEventListener('click', onAnyKey)
+      window.addEventListener('keydown', onKey as EventListener)
+      window.addEventListener('click', onClick)
       return () => {
-        window.removeEventListener('keydown', onAnyKey)
-        window.removeEventListener('click', onAnyKey)
+        window.removeEventListener('keydown', onKey as EventListener)
+        window.removeEventListener('click', onClick)
       }
     } else {
       // small delay then auto-finish on mobile
