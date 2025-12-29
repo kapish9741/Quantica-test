@@ -7,6 +7,7 @@ import EventsSection from '@/components/EventsSection'
 import CarouselStyleSizes from '@/components/CarouselStyleSizes'
 import PastTournaments from '@/components/PastTournaments'
 import GalleryBento from '@/components/GalleryBento'
+import TestimonialsMarquee from '@/components/TestimonialsMarquee'
 import bgVideo from '@/assets/7914778-hd_1920_1080_30fps.mp4'
 
 const Home: React.FC = () => {
@@ -52,12 +53,15 @@ const Home: React.FC = () => {
       {/* Gallery (bento grid) */}
       <GalleryBento />
 
+
       {/* Events section */}
       <EventsSection />
 
       {/* Sizes carousel section */}
       <CarouselStyleSizes />
 
+      {/* Feedback / testimonials marquee */}
+      <TestimonialsMarquee />
       
     </div>
   )
