@@ -16,7 +16,11 @@ const PastTournaments: React.FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {tournaments.map((t) => (
-            <article key={t.id} className="rounded-lg overflow-hidden transform hover:scale-105 transition-shadow duration-300">
+            <article
+              key={t.id}
+              className="rounded-lg overflow-hidden transform transition-transform duration-500 ease-out hover:scale-105"
+              style={{ willChange: 'transform' }}
+            >
               <div className="relative">
                 <img
                   src={`https://picsum.photos/seed/${t.seed}/1200/600`}
