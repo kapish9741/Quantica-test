@@ -311,3 +311,34 @@ body { font-family: var(--font-primary); }
 .progress-bar { height:100%; background: linear-gradient(90deg,#00ffff,#7fffd4); width:0; animation: prog 2.5s linear forwards }
 @keyframes prog { to { width:100% } }
 
+/* Press-start prompt - 8-bit font + pulse/flicker */
+@keyframes pressPulse {
+  0% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-6px) scale(1.05); }
+  100% { transform: translateY(0) scale(1); }
+}
+
+@keyframes pressFlicker {
+  0%, 100% { opacity: 1; text-shadow: 3px 3px 0 #000, -3px -3px 0 #000; }
+  10% { opacity: .85; text-shadow: 4px 2px 0 #000, -2px -4px 0 #000; }
+  20% { opacity: .9; text-shadow: 2px 3px 0 #000, -3px -2px 0 #000; }
+  30% { opacity: .75; text-shadow: 3px 4px 0 #000, -4px -3px 0 #000; }
+  60% { opacity: .95; text-shadow: 3px 3px 0 #000, -3px -3px 0 #000; }
+}
+
+.press-start {
+  font-family: var(--font-secondary);
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 700;
+  color: #7fffd4;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 4px 4px 0 #000, -4px -4px 0 #000, 2px -2px 0 #000;
+  will-change: transform, opacity, text-shadow;
+  animation: pressPulse 1.6s ease-in-out infinite, pressFlicker 3.2s steps(2,end) infinite;
+  -webkit-font-smoothing: none;
+}
+
+.press-start:active { transform: scale(.98) }
+
