@@ -1,4 +1,5 @@
 import React from 'react'
+import { Button } from '@/components/retroui/Button'
 
 export default function Header(){
   return (
@@ -11,7 +12,7 @@ export default function Header(){
           <li className="text-2xl hover:underline cursor-pointer" style={{fontFamily: 'var(--font-primary)'}}>events</li>
           <li className="text-2xl hover:underline cursor-pointer" style={{fontFamily: 'var(--font-primary)'}}>sponsors</li>
         </ul>
-        <button className="px-5 py-2 border-2 border-[#00ffff] text-[#00ffff] rounded-sm hover:bg-[#00ffff]/10 text-lg">register</button>
+        <Button size="lg" className="px-5 py-2 btn-8bit-anim" style={{ backgroundColor: '#00ffff', color: '#000' }}>register</Button>
       </nav>
     </header>
   )

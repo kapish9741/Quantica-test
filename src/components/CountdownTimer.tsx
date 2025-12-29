@@ -35,7 +35,7 @@ const CountdownTimer: React.FC<{ targetDate?: string }> = ({ targetDate = '2026-
       <div className="card bg-transparent border-2 p-4 mx-auto inline-block">
         <div className="mb-3 text-center text-lg font-semibold" style={{ color: '#7fffd4', fontFamily: 'var(--font-primary)' }}>Event starts in</div>
 
-        <div className="grid grid-flow-col gap-5 text-center auto-cols-max items-center">
+        <div className="flex flex-col md:grid md:grid-flow-col md:auto-cols-max gap-5 text-center items-center">
           <div className="flex flex-col items-center">
             <span className="countdown font-mono text-5xl eight-bit-block">
               <span className="eight-bit" style={{ "--value": timeLeft.days } as React.CSSProperties} aria-live="polite" aria-label={counter}>{timeLeft.days}</span>

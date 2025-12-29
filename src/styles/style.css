@@ -206,13 +206,18 @@ body { font-family: var(--font-primary); }
 
 /* Sponsors marquee animation */
 @keyframes marquee-left {
-  0% { transform: translateX(0%); }
-  100% { transform: translateX(-50%); }
+  0% { transform: translate3d(0,0,0); }
+  100% { transform: translate3d(-50%,0,0); }
 }
 
+
 .marquee {
-  display: inline-block;
-  animation: marquee-left 24s linear infinite;
+  display: inline-flex;
+  gap: 1.5rem;
+  align-items: center;
+  animation: marquee-left 30s linear infinite;
+  transform: translate3d(0,0,0);
+  will-change: transform;
 }
 
 .marquee:hover {
@@ -238,4 +243,19 @@ body { font-family: var(--font-primary); }
   background: rgba(255,255,255,0.03);
   padding: 0.6rem 1rem;
   border-radius: 6px;
+}
+
+/* 8-bit button animation */
+.btn-8bit-anim {
+  display: inline-block;
+  transition: transform 120ms linear, box-shadow 120ms linear;
+  box-shadow: 6px 6px 0 rgba(0,0,0,1);
+}
+.btn-8bit-anim:hover {
+  transform: translateY(-4px);
+  box-shadow: 8px 8px 0 rgba(0,0,0,1);
+}
+.btn-8bit-anim:active {
+  transform: translateY(2px) translateX(1px);
+  box-shadow: 4px 4px 0 rgba(0,0,0,1);
 }

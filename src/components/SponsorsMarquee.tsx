@@ -13,12 +13,12 @@ const sponsors = [
 
 const SponsorsMarquee: React.FC = () => {
   return (
-    <section className="w-full py-8 px-6 md:px-12 mb-12 md:mb-20">
+    <section className="w-full py-8 px-6 md:px-12 mb-24 md:mb-32">
       <div className="mx-auto max-w-[1400px] rounded-lg border-2 p-6 bg-transparent">
         <h2 className="text-center text-2xl md:text-3xl mb-4" style={{ color: '#ff6b6b', fontFamily: 'var(--font-secondary)' }}>SPONSORS AND PARTNERS</h2>
 
-        <div className="overflow-hidden relative border-2 rounded-md p-2 bg-black/10">
-          <div className="marquee whitespace-nowrap will-change-transform">
+        <div className="overflow-hidden relative border-2 rounded-md p-2 bg-black/10 flex items-center justify-center">
+          <div className="marquee whitespace-nowrap">
             {Array.from({ length: 2 }).map((_, loopIndex) => (
               <div key={loopIndex} className="inline-flex items-center space-x-6 px-4">
                 {sponsors.map((s) => (
