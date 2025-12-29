@@ -1,6 +1,4 @@
-# Quantica-test
-
-# Fest Website
+# Quantica Website
 
 Starter React + Vite + TypeScript project with Retro 8-bit styling.
 
