@@ -24,13 +24,13 @@ const Home: React.FC = () => {
       <div className="fixed inset-0 bg-black/60 -z-5" />
       <div className="fixed inset-0 bg-white/5 mix-blend-screen -z-4" />
 
-      <Header />
+      {/* <Header /> */}
 
       <main className="min-h-screen flex items-center justify-center px-6">
         <div className="w-full flex justify-center items-center">
           <section className="p-12 md:p-16 rounded-lg border-2 inline-block text-center mx-auto w-auto max-w-[1200px]">
-            <p className="text-2xl md:text-2xl mb-5" style={{color: '#7fffd4', fontFamily: 'var(--font-primary)'}}>NCR's Biggest Esports Fest</p>
-            <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl leading-none break-words" style={{fontFamily: 'var(--font-secondary)', color: '#00ffff'}}>Quantica</h1>
+            <p className="text-lg md:text-2xl mb-5" style={{color: '#7fffd4', fontFamily: 'var(--font-primary)'}}>NCR's Biggest Esports Fest</p>
+            <h1 className="text-3xl sm:text-7xl md:text-8xl lg:text-9xl leading-none break-words" style={{fontFamily: 'var(--font-secondary)', color: '#00ffff'}}>Quantica</h1>
             <p className="mt-6 md:mt-8 text-lg" style={{color: '#cfefff'}}>2000+ Players • Massive Prize Pool</p>
             <p className="mt-3 text-lg" style={{color: '#cfefff'}}>Mobile • PC • Console Tournaments</p>
             <p className="mt-3 text-lg" style={{color: '#cfefff'}}>India's Next-Gen Campus Esports Experience</p>
@@ -48,16 +48,15 @@ const Home: React.FC = () => {
         <CountdownTimer />
       </div>
 
+
+      {/* Events section */}
+      <EventsSection />
+
       {/* Past tournaments (three tiles) */}
       <PastTournaments />
 
       {/* Gallery (bento grid) */}
       <GalleryBento />
-
-
-      {/* Events section */}
-      <EventsSection />
-
       {/* Sizes carousel section */}
       <CarouselStyleSizes />
 
